@@ -1,14 +1,8 @@
-C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\CFUnzipper.exe.config
-C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\CFUnzipper.exe
-C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\CFUnzipper.pdb
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\Guna.UI2.dll
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.Form1.resources
-C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.Properties.Resources.resources
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.csproj.GenerateResource.cache
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.csproj.CoreCompileInputs.cache
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.csproj.CopyComplete
-C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.exe
-C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.pdb
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\SharpCompress.dll
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\System.Buffers.dll
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\System.Memory.dll
@@ -22,3 +16,10 @@ C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\System.Runtime.Comp
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\SimpleFileManager.Form1.resources
 C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\SimpleFileManager.FileSelect.resources
+C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\ZortosUnzipper.Properties.Resources.resources
+C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\ZortosUnzipper.exe.config
+C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\ZortosUnzipper.exe
+C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\bin\Debug\ZortosUnzipper.pdb
+C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\ZortosUnzipper.exe
+C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\ZortosUnzipper.pdb
+C:\Users\Zortos\source\repos\CFUnzipper\CFUnzipper\obj\Debug\CFUnzipper.csprojAssemblyReference.cache

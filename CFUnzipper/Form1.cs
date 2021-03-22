@@ -1,14 +1,17 @@
 ﻿
 using SharpCompress.Archives;
 using SharpCompress.Archives.Rar;
+using SharpCompress.Archives.SevenZip;
+using SharpCompress.Archives.Zip;
 using SharpCompress.Common;
+using SharpCompress.Readers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.IO.Compression;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,15 +35,26 @@ namespace CFUnzipper
 
             if (argumentinstring.EndsWith(@".zip"))
             {
-
-                ZipFile.ExtractToDirectory(argumentinstring.Substring(argumentinstring.IndexOf(',') + 1), Path.GetTempPath() + @"ZortosUnzipper");
+                using (var archive = ZipArchive.Open(argumentinstring.Substring(argumentinstring.IndexOf(',') + 1)))
+                {
+                    foreach (var entry in archive.Entries.Where(entry => !entry.IsDirectory))
+                    {
+                        entry.WriteToDirectory(Path.GetTempPath() + @"ZortosUnzipper", new ExtractionOptions()
+                        {
+                            ExtractFullPath = true,
+                            Overwrite = true
+                        });
+                    }
+                }
+                //ZipFile.ExtractToDirectory(argumentinstring.Substring(argumentinstring.IndexOf(',') + 1), Path.GetTempPath() + @"ZortosUnzipper");
                 MessageBox.Show("Done File Extracted inside" + "\n" + Path.GetTempPath() + @"ZortosUnzipper");
+                Dispose();
                 Environment.Exit(0);
 
             }
             if (argumentinstring.EndsWith(".7z"))
             {
-                using (var archive = RarArchive.Open(argumentinstring.Substring(argumentinstring.IndexOf(',') + 1)))
+                using (var archive = SevenZipArchive.Open(argumentinstring.Substring(argumentinstring.IndexOf(',') + 1)))
                 {
                     foreach (var entry in archive.Entries.Where(entry => !entry.IsDirectory))
                     {
@@ -52,6 +66,7 @@ namespace CFUnzipper
                     }
                 }
                 MessageBox.Show("Done File Extracted inside" + "\n" + Path.GetTempPath() + @"ZortosUnzipper");
+                Dispose();
                 Environment.Exit(0);
             }
             if (argumentinstring.EndsWith(".rar"))
@@ -68,6 +83,7 @@ namespace CFUnzipper
                     }
                 }
                 MessageBox.Show("Done File Extracted inside:" + "\n" + Path.GetTempPath() + @"ZortosUnzipper");
+                Dispose();
                 Environment.Exit(0);
             }
 
@@ -83,6 +99,8 @@ namespace CFUnzipper
         {
             await ShowPopup(new SimpleFileManager.FileSelect());
             ziplocation.Text = SelectedFile;
+            ziplocation.Text.Replace(@"//", @"/");
+            ziplocation.Update();
 
         }
        
@@ -94,14 +112,28 @@ namespace CFUnzipper
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            ziplocation.Text.Replace(@"//", @"/");
+            unziplocation.Text.Replace(@"//", @"/");
             if (ziplocation.Text.EndsWith(".zip"))
             {
-                ZipFile.ExtractToDirectory(ziplocation.ToString(), unziplocation.ToString());
+                using (var archive = ZipArchive.Open(ziplocation.Text.ToString()))
+                {
+                    foreach (var entry in archive.Entries.Where(entry => !entry.IsDirectory))
+                    {
+                        entry.WriteToDirectory(unziplocation.Text.ToString(), new ExtractionOptions()
+                        {
+                            ExtractFullPath = true,
+                            Overwrite = true
+                        });
+                    }
+                    
+                }
+                
                 MessageBox.Show("Extracted!");
             }
             if (ziplocation.Text.EndsWith(".7z"))
             {
-                using (var archive = RarArchive.Open(ziplocation.Text.ToString()))
+                using (var archive = SevenZipArchive.Open(ziplocation.Text.ToString()))
                 {
                     foreach (var entry in archive.Entries.Where(entry => !entry.IsDirectory))
                     {
@@ -112,6 +144,7 @@ namespace CFUnzipper
                         });
                     }
                 }
+                
                 MessageBox.Show("Extracted!");
             }
             if (ziplocation.Text.EndsWith(".rar"))
@@ -126,7 +159,9 @@ namespace CFUnzipper
                             Overwrite = true
                         });
                     }
+
                 }
+                
                 MessageBox.Show("Extracted!");
             }
         }
@@ -135,6 +170,9 @@ namespace CFUnzipper
         {
             await ShowPopup(new SimpleFileManager.Form1());
             unziplocation.Text = SelectedFolder;
+            unziplocation.Text.Replace(@"//", @"/");
+            unziplocation.Update();
+
         }
         private Task ShowPopup<TPopup>(TPopup popup)
         where TPopup : Form
@@ -144,6 +182,8 @@ namespace CFUnzipper
             popup.Show();
             popup.Focus();
             return task.Task;
+            
+            
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -153,7 +193,7 @@ namespace CFUnzipper
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Made By Zortos V1.0");
+            MessageBox.Show("Made By Zortos V1.1");
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)

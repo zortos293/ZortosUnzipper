@@ -1,0 +1,12 @@
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\bin\Release\ZortosUnzipperDL.exe.config
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\bin\Release\ZortosUnzipperDL.exe
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\bin\Release\ZortosUnzipperDL.pdb
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\bin\Release\Guna.UI2.dll
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.Form1.resources
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.Properties.Resources.resources
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.csproj.GenerateResource.cache
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.csproj.CoreCompileInputs.cache
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.csproj.CopyComplete
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.exe
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.pdb
+C:\Users\Zortos\source\repos\CFUnzipper\ZortosUnzipperDL\obj\Release\ZortosUnzipperDL.csprojAssemblyReference.cache

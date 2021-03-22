@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Desktop\lt1-master\CloudForce\bin\Debug\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\Arcadius UI\Arcadius UI\bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SharpCompress, Version=0.28.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
